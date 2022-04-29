@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import { MovieContext } from "../../context/MovieContext";
 import { Link } from "react-router-dom";
 
+
 function SidePanel() {
     const {setFilterMovies} = useContext(MovieContext)
     const [genre, setGenre] = useState({})
