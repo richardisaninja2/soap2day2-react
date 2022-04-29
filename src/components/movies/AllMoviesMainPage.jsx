@@ -94,7 +94,7 @@ function AllMovies() {
 
 
 
-        if(sampleSizeOmdbWebsite.length < 1){
+        if(newMovies.length < 1){
             return(
                 <div>
                     loading data

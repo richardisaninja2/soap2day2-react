@@ -91,7 +91,7 @@ function PopularMoviesComponent({popularMovies}) {
     }
    
 
-        if(sampleSizeOmdbWebsite.length < 1){
+        if(filter.length < 1){
             return(
                 <div>
                     loading data

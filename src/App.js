@@ -27,14 +27,14 @@ function App() {
     const allMovies = newMovies.concat(popularMovies);
     //get popular movies from database
     async function getPopularMovies () {
-      await axios.get("http://localhost:8080/listPopularMovies")
+      await axios.get("https://soap2day2-backend.herokuapp.com/listPopularMovies")
       .then(movies => {
         setPopularMovies(movies.data);
         setTest(true)
       })
     }
     async function getNewMovies () {
-      await axios.get("http://localhost:8080/getNewMovies")
+      await axios.get("https://soap2day2-backend.herokuapp.com/getNewMovies")
       .then(movies => {
         setNewMovies(movies.data)
         setReload(true)
@@ -42,17 +42,17 @@ function App() {
       
     }
 
-    const getMovies = () => {
-        axios.get("http://localhost:8080/getAll")
-        .then(movies => {
+    // const getMovies = () => {
+    //     axios.get("http://localhost:8080/getAll")
+    //     .then(movies => {
             
-            setJavaMovies(movies.data)
-            setMovieSampleSize(movies.data.slice(0, 21));           
-        })
-    } 
+    //         setJavaMovies(movies.data)
+    //         setMovieSampleSize(movies.data.slice(0, 21));           
+    //     })
+    // } 
      
     useEffect(() => {
-        getMovies()
+        // getMovies()
 
         getPopularMovies()
         getNewMovies();
